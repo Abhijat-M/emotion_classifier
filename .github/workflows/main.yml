@@ -1,0 +1,40 @@
+name: Sync to Hugging Face hub
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Install Git LFS
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-lfs
+          git lfs install
+
+      - name: Track binary files with Git LFS
+        run: |
+          git lfs track "*.joblib"
+          git add .gitattributes
+          git status
+
+      - name: Commit LFS config (if needed)
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git commit -m "Track joblib files with Git LFS" || echo "No changes to commit"
+
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git push --force https://abhijatmishra:$HF_TOKEN@huggingface.co/spaces/abhijatmishra/Emotion_classification main
