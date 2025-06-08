@@ -279,10 +279,12 @@ After training, two key artifacts are serialized to disk in Joblib format for fa
   GO Emotions for BERT model (**https://huggingface.co/joeddav/distilbert-base-uncased-go-emotions-student**)
 
 
-## Improvements : Add more emotions, experiment with CNN/LSTM models, or optimize BERT for speed.
+## Improvements :
+
+**Add more emotions, experiment with CNN/LSTM models, or optimize BERT for speed.**
 
 ## Contributing
 
 Report bugs or suggest improvements via GitHub Issues.
-Pull requests welcome!
+Pull requests are welcome!
    
