@@ -272,12 +272,11 @@ After training, two key artifacts are serialized to disk in Joblib format for fa
 
 
 ## Additional Resources
-
-1. Datasets :
+**Datasets :**
 
   DailyDialog for training (**https://www.kaggle.com/datasets/mgmitesh/sentiment-analysis-dataset**)
 
-   GO Emotions for BERT model (**https://huggingface.co/joeddav/distilbert-base-uncased-go-emotions-student**)
+  GO Emotions for BERT model (**https://huggingface.co/joeddav/distilbert-base-uncased-go-emotions-student**)
 
 
 ## Improvements : Add more emotions, experiment with CNN/LSTM models, or optimize BERT for speed.
