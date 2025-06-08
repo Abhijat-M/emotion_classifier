@@ -93,6 +93,46 @@ emotion_classifier/
 ```
 
 
+## Approach Summary
+
+This project is an **Emotion Detection System** that predicts the emotional tone of a given text input using classical machine learning techniques. Below is a high-level overview of the approach taken:
+
+### 1. **Data Collection**
+- Used the **DailyDialog** dataset, which contains everyday dialogues annotated with emotion labels.
+- The dataset was fetched from a remote GitHub URL and parsed line-by-line for robustness.
+
+### 2. **Preprocessing**
+- Cleaned the raw text by:
+  - Lowercasing
+  - Removing special characters
+  - Removing stopwords
+  - Lemmatizing each word
+- Ensured all inputs were normalized for consistent and meaningful vectorization.
+
+### 3. **Feature Extraction**
+- Applied **TF–IDF Vectorization** to convert text into numerical vectors.
+- Limited to a vocabulary of 5,000 most informative features for better performance and speed.
+
+### 4. **Model Training**
+- Trained a **Logistic Regression** classifier with class balancing and extended iteration limits.
+- Used an 80/20 stratified train-test split to ensure representative emotion distribution.
+
+### 5. **Evaluation**
+- Measured accuracy and generated a classification report on the test set.
+- Plotted a **confusion matrix** to visualize the model’s performance across emotion categories.
+
+### 6. **Model Deployment**
+- Saved the trained model and vectorizer using `joblib` for quick loading in production.
+- Built a user-friendly web interface using **Gradio**, allowing users to input text and receive emotion predictions with emojis.
+
+### 7. **Emotion Mapping**
+- Raw labels from the dataset (`joy`, `sadness`, etc.) were mapped to cleaned user-friendly labels (`Happy`, `Sad`, etc.).
+- Emojis were also added to enhance user feedback.
+
+
+
+
+
 ## **Model Details**
   1. **Logistic Regression Model**
 
