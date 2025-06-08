@@ -144,7 +144,7 @@ This project is an **Emotion Detection System** that predicts the emotional tone
 
   2. **GO Emotions BERT Model**
 
-    Emotions : 27 fine-grained emotions ( **https://huggingface.co/joeddav/distilbert-base-uncased-go-emotions-student** ).
+    Emotions : 27 fine-grained emotions ( https://huggingface.co/joeddav/distilbert-base-uncased-go-emotions-student).
 
     Performance : Higher accuracy but slower inference compared to logistic regression.
 
@@ -153,6 +153,8 @@ This project is an **Emotion Detection System** that predicts the emotional tone
   Gradio App : Hosted locally by default. For production, deploy using Gradio’s cloud services or a web server or on RENDER.
 
   Docker : Optional (not included in repo).
+
+  Huggingface Spaces: https://huggingface.co/spaces/abhijatmishra/Emotion_classification
 
 ## Configuration (`config.py`)
 
