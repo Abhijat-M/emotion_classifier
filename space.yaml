@@ -1,0 +1,11 @@
+runtime:
+  type: python
+  version: "3.9"
+  requirements:
+    - joblib
+    - scikit-learn
+    - gradio
+    - pandas
+    - nltk
+    - matplotlib
+    - seaborn
